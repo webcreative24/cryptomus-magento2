@@ -1,0 +1,31 @@
+{
+    "name": "magebrains/module-cryptomus-m2",
+    "description": "Cryptomus Payment integration for Magento 2",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Sergey Y",
+            "email": "imdeveloper@yandex.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "cryptomus/api-php-sdk": "^1.0",
+        "magento/module-quote": "*",
+        "magento/module-sales": "*",
+        "magento/module-directory": "*",
+        "magento/module-config": "*",
+        "magento/module-payment": "*",
+        "magento/module-checkout": "*",
+        "magento/module-store": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageBrains\\Cryptomus\\": ""
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+			<cryptomus>
+				<active>1</active>
+				<model>MageBrains\Cryptomus\Model\Payment\Cryptomus</model>
+                <payment_key/>
+                <merchant_uuid/>
+                <lifetime>7200</lifetime>
+				<order_status>pending</order_status>
+				<title>Cryptomus</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+			</cryptomus>
+		</payment>
+	</default>
+</config>
