@@ -1,7 +1,5 @@
 # Cryptomus Payment integration for Magento 2
 
-    ``magebrains/module-cryptomus``
-
  - [Main Functionalities](#markdown-header-main-functionalities)
  - [Installation](#markdown-header-installation)
  - [Configuration](#markdown-header-configuration)
