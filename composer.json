@@ -1,5 +1,5 @@
 {
-    "name": "magebrains/module-cryptomus-m2",
+    "name": "magebrains/cryptomus-magento2",
     "description": "Cryptomus Payment integration for Magento 2",
     "type": "magento2-module",
     "license": "GPL-3.0",
