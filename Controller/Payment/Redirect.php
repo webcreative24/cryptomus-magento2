@@ -9,7 +9,6 @@ use Magento\Framework\Controller\ResultFactory;
 
 class Redirect implements HttpGetActionInterface
 {
-
     /**
      * @var Session
      */
@@ -25,6 +24,11 @@ class Redirect implements HttpGetActionInterface
      */
     private ResultFactory $resultFactory;
 
+    /**
+     * @param Session $checkoutSession
+     * @param PaymentService $paymentService
+     * @param ResultFactory $resultFactory
+     */
     public function __construct(Session $checkoutSession, PaymentService $paymentService, ResultFactory $resultFactory)
     {
         $this->checkoutSession = $checkoutSession;
