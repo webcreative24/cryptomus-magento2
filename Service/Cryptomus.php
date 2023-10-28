@@ -102,7 +102,7 @@ class Cryptomus
     /**
      * @return string
      */
-    public function getDefaultSuccessPageUrl()
+    private function getDefaultSuccessPageUrl()
     {
         return $this->urlBuilder->getUrl('checkout/onepage/success/');
     }
