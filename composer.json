@@ -3,7 +3,7 @@
     "description": "Cryptomus Payment integration for Magento 2",
     "type": "magento2-module",
     "license": "GPL-3.0",
-    "version": "1.0",
+    "version": "1.1",
     "authors": [
         {
             "name": "Sergey Y",
