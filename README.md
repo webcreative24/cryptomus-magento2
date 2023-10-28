@@ -1,4 +1,4 @@
-# Mage2 Module MageBrains Cryptomus
+# Cryptomus Payment integration for Magento 2
 
     ``magebrains/module-cryptomus``
 
@@ -8,9 +8,6 @@
  - [Specifications](#markdown-header-specifications)
  - [Attributes](#markdown-header-attributes)
 
-
-## Main Functionalities
-N/A
 
 ## Installation
 \* = in production please use the `--keep-generated` option
@@ -25,11 +22,8 @@ N/A
 ### Type 2: Composer
 
  - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require magebrains/module-cryptomus`
+ - 
+ - Install the module composer by running `composer require magebrains/cryptomus-magento2`
  - enable the module by running `php bin/magento module:enable MageBrains_Cryptomus`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
@@ -37,16 +31,15 @@ N/A
 
 ## Configuration
 
- - cryptomus - payment/cryptomus/*
+ - System Settings->Sales->Payment methods->Cryptomus
+ - Set API key(Payment key) from Cryptomus merchant settings
+ - Set Merchant UUID(Secret) from Cryptomus merchant settings 
 
 
 ## Specifications
 
  - Payment Method
 	- cryptomus
-
-
-## Attributes
 
 
 
