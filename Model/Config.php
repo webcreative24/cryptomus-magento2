@@ -5,6 +5,7 @@ namespace MageBrains\Cryptomus\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
+
 class Config
 {
     /**
@@ -21,6 +22,8 @@ class Config
     }
 
     /**
+     * Get api key
+     *
      * @param int|null $storeId
      * @return string
      */
@@ -34,8 +37,9 @@ class Config
         return $apiKey;
     }
 
-
     /**
+     * Get api merchant UUID
+     *
      * @param int|null $storeId
      * @return string
      */
@@ -50,6 +54,8 @@ class Config
     }
 
     /**
+     * Get api lifitime
+     *
      * @param int|null $storeId
      * @return string
      */
@@ -63,9 +69,13 @@ class Config
         return $apiIdentifier;
     }
 
+    /**
+     * Check api credentials
+     *
+     * @return bool
+     */
     public function configIsValid()
     {
         return $this->getPaymentKey() && $this->getMerchantUUID();
     }
-
 }

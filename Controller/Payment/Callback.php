@@ -13,19 +13,19 @@ use Magento\Framework\Webapi\Rest\Request;
 
 class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
 {
-    const CRYPTOMUS_ERROR_STATUSES = [
+    private const CRYPTOMUS_ERROR_STATUSES = [
         'fail',
         'system_fail',
         'wrong_amount',
         'cancel',
     ];
 
-    const CRYPTOMUS_PENDING_STATUSES = [
+    private const CRYPTOMUS_PENDING_STATUSES = [
         'process',
         'check',
     ];
 
-    const PAID_STATUSES = [
+    private const PAID_STATUSES = [
         'paid',
         'paid_over',
     ];
@@ -55,8 +55,7 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
         OrderManagement $orderManagement,
         JsonFactory     $resultJsonFactory,
         Logger          $logger
-    )
-    {
+    ) {
         $this->request = $request;
         $this->logger = $logger;
         $this->orderManagement = $orderManagement;
@@ -64,6 +63,8 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
     }
 
     /**
+     * Execute response from payment gateway
+     *
      * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\Result\Json|\Magento\Framework\Controller\ResultInterface
      */
     public function execute()
@@ -99,6 +100,8 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
     }
 
     /**
+     * Prevent Csrf validation
+     *
      * @param RequestInterface $request
      *
      * @return bool|null
@@ -109,6 +112,8 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
     }
 
     /**
+     * Prevent Csrf validation
+     *
      * @param RequestInterface $request
      *
      * @return InvalidRequestException|null

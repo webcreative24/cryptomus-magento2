@@ -7,6 +7,7 @@ use Cryptomus\Api\Client;
 use MageBrains\Cryptomus\Model\Config;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\UrlInterface;
+use Magento\Sales\Model\Order;
 use Magento\Store\Model\StoreManagerInterface;
 
 class Cryptomus
@@ -42,6 +43,8 @@ class Cryptomus
     }
 
     /**
+     * Get payment provider class instance
+     *
      * @return \Cryptomus\Api\Payment
      */
     private function get()
@@ -50,7 +53,9 @@ class Cryptomus
     }
 
     /**
-     * @param $order
+     * Create order in pyament gateway
+     *
+     * @param Order $order
      * @return mixed|null
      * @throws LocalizedException
      * @throws \Cryptomus\Api\RequestBuilderException
@@ -73,7 +78,9 @@ class Cryptomus
     }
 
     /**
-     * @param $order
+     * Get data for payment request
+     *
+     * @param Order $order
      * @return array
      */
     private function getData($order)
@@ -100,6 +107,8 @@ class Cryptomus
     }
 
     /**
+     * Get successe page url
+     *
      * @return string
      */
     private function getDefaultSuccessPageUrl()

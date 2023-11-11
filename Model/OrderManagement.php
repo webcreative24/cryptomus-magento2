@@ -67,7 +67,9 @@ class OrderManagement
     }
 
     /**
-     * @param $orderIncrementId
+     * Create invoice for order
+     *
+     * @param string $orderIncrementId
      * @return void
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -103,7 +105,9 @@ class OrderManagement
     }
 
     /**
-     * @param $incrementId
+     * Cancel order
+     *
+     * @param string $incrementId
      * @return void
      */
     public function cancelOrder($incrementId)
@@ -115,7 +119,9 @@ class OrderManagement
     }
 
     /**
-     * @param $orderIncrementId
+     * Get order by increment_id
+     *
+     * @param string $orderIncrementId
      * @return \Magento\Sales\Model\Order
      */
     private function getOrderByIncrementId($orderIncrementId)

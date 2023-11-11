@@ -15,7 +15,7 @@ class Handler extends BaseHandler
     protected $loggerType = Logger::WARNING;
 
     /**
-     * File name
+     * File name for custom logger
      * @var string
      */
     protected $fileName = '/var/log/cryptomus.log';

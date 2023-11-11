@@ -37,6 +37,8 @@ class Redirect implements HttpGetActionInterface
     }
 
     /**
+     * Execute redirect to payment page
+     *
      * @return \Magento\Backend\Model\View\Result\Redirect|\Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface
      * @throws \Cryptomus\Api\RequestBuilderException
      * @throws \Magento\Framework\Exception\LocalizedException
