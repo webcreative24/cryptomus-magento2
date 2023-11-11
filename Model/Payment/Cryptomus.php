@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MageBrains\Cryptomus\Model\Payment;
 
-class Cryptomus extends \Magento\Payment\Model\Method\Adapter
+class Cryptomus extends \Magento\Payment\Model\Method\AbstractMethod
 {
 
     /**
