@@ -1,4 +1,4 @@
 <?php
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'MageBrains_Cryptomus', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Cryptomus_Payment', __DIR__);

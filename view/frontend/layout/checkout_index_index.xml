@@ -16,7 +16,7 @@
 														<item name="renders" xsi:type="array">
 															<item name="children" xsi:type="array">
 																<item name="cryptomus" xsi:type="array">
-																	<item name="component" xsi:type="string">MageBrains_Cryptomus/js/view/payment/cryptomus</item>
+																	<item name="component" xsi:type="string">Cryptomus_Payment/js/view/payment/cryptomus</item>
 																	<item name="methods" xsi:type="array">
 																		<item name="cryptomus" xsi:type="array">
 																			<item name="isBillingAddressRequired" xsi:type="boolean">true</item>

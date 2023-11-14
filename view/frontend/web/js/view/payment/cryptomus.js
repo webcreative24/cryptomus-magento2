@@ -11,7 +11,7 @@ define(
         rendererList.push(
             {
                 type: 'cryptomus',
-                component: 'MageBrains_Cryptomus/js/view/payment/method-renderer/cryptomus-method'
+                component: 'Cryptomus_Payment/js/view/payment/method-renderer/cryptomus-method'
             }
         );
         return Component.extend({});

@@ -4,7 +4,7 @@
 		<payment>
 			<cryptomus>
 				<active>1</active>
-				<model>MageBrains\Cryptomus\Model\Payment\Cryptomus</model>
+				<model>Cryptomus\Payment\Model\Payment\Cryptomus</model>
                 <payment_key/>
                 <merchant_uuid/>
                 <lifetime>7200</lifetime>

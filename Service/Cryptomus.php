@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace MageBrains\Cryptomus\Service;
+namespace Cryptomus\Payment\Service;
 
 use Cryptomus\Api\Client;
-use MageBrains\Cryptomus\Model\Config;
+use Cryptomus\Payment\Model\Config;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\UrlInterface;
 use Magento\Sales\Model\Order;

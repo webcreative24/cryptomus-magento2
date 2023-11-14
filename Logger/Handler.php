@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MageBrains\Cryptomus\Logger;
+namespace Cryptomus\Payment\Logger;
 
 use Magento\Framework\Logger\Handler\Base as BaseHandler;
 use Monolog\Logger;

@@ -1,9 +1,9 @@
 <?php
 
-namespace MageBrains\Cryptomus\Controller\Payment;
+namespace Cryptomus\Payment\Controller\Payment;
 
-use MageBrains\Cryptomus\Logger\Logger;
-use MageBrains\Cryptomus\Model\OrderManagement;
+use Cryptomus\Payment\Logger\Logger;
+use Cryptomus\Payment\Model\OrderManagement;
 use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\App\CsrfAwareActionInterface;
 use Magento\Framework\App\Request\InvalidRequestException;

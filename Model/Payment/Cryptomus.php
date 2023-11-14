@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MageBrains\Cryptomus\Model\Payment;
+namespace Cryptomus\Payment\Model\Payment;
 
 class Cryptomus extends \Magento\Payment\Model\Method\AbstractMethod
 {

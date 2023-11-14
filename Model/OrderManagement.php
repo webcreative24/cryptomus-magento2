@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace MageBrains\Cryptomus\Model;
+namespace Cryptomus\Payment\Model;
 
-use MageBrains\Cryptomus\Logger\Logger;
+use Cryptomus\Payment\Logger\Logger;
 use Magento\Framework\DB\Transaction;
 use Magento\Sales\Api\OrderManagementInterface;
 use Magento\Sales\Model\Order\Email\Sender\InvoiceSender;

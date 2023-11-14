@@ -8,7 +8,7 @@ define(
         'use strict';
         return Component.extend({
             defaults: {
-                template: 'MageBrains_Cryptomus/payment/cryptomus'
+                template: 'Cryptomus_Payment/payment/cryptomus'
             },
             getInstructions: function () {
                 return window.checkoutConfig.payment.instructions[this.item.method];

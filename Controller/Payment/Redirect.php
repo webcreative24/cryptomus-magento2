@@ -1,8 +1,8 @@
 <?php
 
-namespace MageBrains\Cryptomus\Controller\Payment;
+namespace Cryptomus\Payment\Controller\Payment;
 
-use MageBrains\Cryptomus\Service\Cryptomus as PaymentService;
+use Cryptomus\Payment\Service\Cryptomus as PaymentService;
 use Magento\Checkout\Model\Session;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;

@@ -12,8 +12,8 @@
 
 ### Type 1: Zip file
 
- - Unzip the zip file in `app/code/MageBrains`
- - Enable the module by running `php bin/magento module:enable MageBrains_Cryptomus`
+ - Unzip the zip file in `app/code/Cryptomus`
+ - Enable the module by running `php bin/magento module:enable Cryptomus_Payment`
  - Apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
 
@@ -22,7 +22,7 @@
  - Make the module available in a composer repository for example:
  - 
  - Install the module composer by running `composer require magebrains/cryptomus-magento2`
- - enable the module by running `php bin/magento module:enable MageBrains_Cryptomus`
+ - enable the module by running `php bin/magento module:enable Cryptomus_Payment`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
 
