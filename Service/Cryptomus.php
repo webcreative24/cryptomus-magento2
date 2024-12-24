@@ -92,7 +92,8 @@ class Cryptomus
             'url_return' => $this->getDefaultSuccessPageUrl(),
             'url_callback' => $this->urlBuilder->getUrl('cryptomus/payment/callback'),
             'is_payment_multiple' => false,
-            'lifetime' => $this->config->getLifetime()
+            'lifetime' => $this->config->getLifetime(),
+            'plugin_name' => 'magento_2'
         ];
     }
 
