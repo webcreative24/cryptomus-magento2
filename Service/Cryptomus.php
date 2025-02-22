@@ -121,7 +121,7 @@ class Cryptomus
      * @param $data
      * @return bool
      */
-    private function hashEqual($data)
+    public function hashEqual($data)
     {
         $paymentKey = trim($this->config->getPaymentKey());
 
