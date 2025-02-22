@@ -116,4 +116,31 @@ class Cryptomus
     {
         return $this->urlBuilder->getUrl('checkout/onepage/success/');
     }
+
+    /**
+     * @param $data
+     * @return bool
+     */
+    private function hashEqual($data)
+    {
+        $paymentKey = trim($this->config->getPaymentKey());
+
+        if (!$paymentKey) {
+            return false;
+        }
+
+        $signature = $data['sign'];
+        if (!$signature) {
+            return false;
+        }
+
+        unset($data['sign']);
+
+        $hash = md5(base64_encode(json_encode($data, JSON_UNESCAPED_UNICODE)) . $paymentKey);
+        if (!hash_equals($hash, $signature)) {
+            return false;
+        }
+
+        return true;
+    }
 }
