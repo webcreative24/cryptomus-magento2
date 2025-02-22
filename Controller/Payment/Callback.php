@@ -10,6 +10,7 @@ use Magento\Framework\App\Request\InvalidRequestException;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Webapi\Rest\Request;
+use Cryptomus\Payment\Service\Cryptomus as PaymentService;
 
 class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
 {
@@ -45,6 +46,11 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
     private $resultJsonFactory;
 
     /**
+     * @var PaymentService
+     */
+    private PaymentService $paymentService;
+
+    /**
      * @param Request $request
      * @param OrderManagement $orderManagement
      * @param JsonFactory $resultJsonFactory
@@ -54,12 +60,14 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
         Request         $request,
         OrderManagement $orderManagement,
         JsonFactory     $resultJsonFactory,
-        Logger          $logger
+        Logger          $logger,
+        PaymentService  $paymentService
     ) {
         $this->request = $request;
         $this->logger = $logger;
         $this->orderManagement = $orderManagement;
         $this->resultJsonFactory = $resultJsonFactory;
+        $this->paymentService = $paymentService;
     }
 
     /**
@@ -71,6 +79,11 @@ class Callback implements HttpPostActionInterface, CsrfAwareActionInterface
     {
         $request = $this->request->getBodyParams();
         $this->logger->warning(json_encode($request));
+        if (!$this->paymentService->hashEqual($request)) {
+            throw new LocalizedException(
+                __('Invalid sign.')
+            );
+        }
         $cryptomusOrderStatus = $request['status'];
         $orderId = $request['order_id'];
         $resultJson = $this->resultJsonFactory->create();
